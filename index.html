@@ -4,108 +4,198 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asia Rackard - Interactive Resume</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f4f4f9, #dff6f0);
+            color: #333;
+        }
+        header {
+            background: url('file:///C:/Users/asiab/OneDrive/Pictures/IT_HEADSHOT.JPEG') no-repeat center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        header p {
+            font-size: 1.2em;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+        }
+        .skills, .experience, .education {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .skills div, .experience div, .education div {
+            padding: 15px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .animated-hover:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#portfolio">Career Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="about">
-        <h1>About Me</h1>
-        <div class="about-container">
-            <img src="images/IT_HEADSHOT.JPEG" alt="Asia Rackard Headshot" class="headshot">
-            <p>Hello! I'm Asia Rackard, an aspiring IT professional passionate about user experience and web development. I enjoy designing intuitive interfaces and enhancing functionality through creative problem-solving.</p>
-        </div>
-    </section>
-    
-    <section id="skills">
-        <h1>Skills</h1>
-        <ul>
-            <li>Web Development (HTML, CSS, JavaScript)</li>
-            <li>User Interface (UI) Design</li>
-            <li>Mobile Responsive Design</li>
-            <li>Project Management</li>
-            <li>Problem-Solving</li>
-        </ul>
-    </section>
-    
-    <section id="education">
-        <h1>Education</h1>
-        <div class="education">
-            <div>
-                <h3>Florida State University, Tallahassee, FL</h3>
-                <p>Bachelor of Science in Information Technology</p>
-                <p><strong>GPA:</strong> 3.8</p>
-                <p>Expected Graduation: 2025</p>
-            </div>
-            <div>
-                <h3>Florida State University, Tallahassee, FL</h3>
-                <p>Bachelor of Fine Arts in Studio Art</p>
-                <p>Expected Graduation: 2025</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="experience">
-        <h1>Experience</h1>
-        <div class="experience">
-            <div>
-                <h3>Owner, Nail Business</h3>
-                <p><em>Tallahassee, FL | 2022–Present</em></p>
-                <ul>
-                    <li>Managed daily operations, including client scheduling and inventory purchasing.</li>
-                    <li>Oversaw financial records and operational logistics for a full-time business.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Baker, Sam’s Club</h3>
-                <p><em>Riverview, FL | 2022</em></p>
-                <ul>
-                    <li>Cooked and packaged food in batches for bulk orders.</li>
-                    <li>Collaborated with team members to ensure timely service.</li>
-                </ul>
-            </div>
-            <div>
-                <h3>Server, Coldstone Creamery</h3>
-                <p><em>Riverview, FL | 2021</em></p>
-                <ul>
-                    <li>Operated cash registers and ensured accurate customer payments.</li>
-                    <li>Maintained cleanliness and health standards in food preparation areas.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    
-    <section id="portfolio">
-        <h1>Career Portfolio</h1>
-        
-        <div class="project">
-            <h2>Classroom Control System Rebranding</h2>
-            <img src="images/Screenshot (134).png" alt="Classroom Control System" class="project-img">
-            <p><strong>Project Goals and Scope:</strong> This was a group project aimed at rebranding and improving the user interface of a Classroom Control System. The goal was to enhance usability, simplify navigation, and reduce operational errors.</p>
-            <p><strong>My Contribution:</strong> I worked on the UI redesign, improving usability, refining the layout, ensuring accessibility, and creating a wireframe for the new interface.</p>
-        </div>
+    <header>
+        <h1>Asia Rackard</h1>
+        <p>Aspiring IT Professional | Creative Problem Solver | Innovator</p>
+    </header>
 
-        <div class="project">
-            <h2>Healthy Recipes Mobile Web App</h2>
-            <img src="images/PastaRecipe.jpg" alt="Healthy Recipes App" class="project-img">
-            <p><strong>Project Goals and Scope:</strong> This was a solo project to develop a mobile-responsive web app showcasing healthy recipes. The goal was to ensure a clean design and smooth user experience across devices.</p>
-            <p><strong>My Contribution:</strong> I designed and developed the entire app, implementing a modern, interactive layout with easy navigation for users to explore recipes.</p>
-        </div>
-    </section>
-    
-    <section id="contact">
-        <h1>Contact</h1>
-        <p>Email: asiabake11@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/asiarackard" target="_blank">linkedin.com/in/asiarackard</a></p>
-    </section>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section animated-hover">
+            <h2>About Me</h2>
+            <p>I am an IT professional with a strong foundation in programming, cybersecurity, and design. My goal is to leverage my skills to develop secure, efficient, and innovative solutions in the tech industry.</p>
+        </section>
+
+        <section id="skills" class="section animated-hover">
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <div>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Wireshark</li>
+                        <li>Kali Linux</li>
+                        <li>Splunk</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Additional</h3>
+                    <ul>
+                        <li>Public Speaking</li>
+                        <li>Team Collaboration</li>
+                        <li>Social Media Management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section animated-hover">
+            <h2>Education</h2>
+            <div class="education">
+                <div>
+                    <h3>Florida State University, Tallahassee, FL</h3>
+                    <p>Bachelor of Science in Information Technology</p>
+                    <p><strong>GPA:</strong> 3.8</p>
+                    <p>Expected Graduation: 2025</p>
+                </div>
+                <div>
+                    <h3>Florida State University, Tallahassee, FL</h3>
+                    <p>Bachelor of Fine Arts in Studio Art</p>
+                    <p>Expected Graduation: 2025</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section animated-hover">
+            <h2>Professional Experience</h2>
+            <div class="experience">
+                <div>
+                    <h3>Owner, Nail Business</h3>
+                    <p><em>Tallahassee, FL | 2022–Present</em></p>
+                    <ul>
+                        <li>Managed daily operations, including client scheduling and inventory purchasing.</li>
+                        <li>Oversaw financial records and operational logistics for a full-time business.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Baker, Sam’s Club</h3>
+                    <p><em>Riverview, FL | 2022</em></p>
+                    <ul>
+                        <li>Cooked and packaged food in batches for bulk orders.</li>
+                        <li>Collaborated with team members to ensure timely service.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Server, Coldstone Creamery</h3>
+                    <p><em>Riverview, FL | 2021</em></p>
+                    <ul>
+                        <li>Operated cash registers and ensured accurate customer payments.</li>
+                        <li>Maintained cleanliness and health standards in food preparation areas.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section animated-hover">
+            <h2>Contact Me</h2>
+            <div class="contact">
+                <p>Email: asiabake11@gmail.com</p>
+                <p>Phone: (813) 454-7486</p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/asiarackard" target="_blank">linkedin.com/in/asiarackard</a></p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Asia Rackard | All Rights Reserved</p>
+    </footer>
 </body>
 </html>
